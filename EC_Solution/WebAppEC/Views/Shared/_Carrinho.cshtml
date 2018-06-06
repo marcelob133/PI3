@@ -1,0 +1,64 @@
+﻿<section id="cart">
+    <div class="cart-header">
+        <div class="wrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="cart-product-photo-title">
+                            Foto
+                        </td>
+                        <td class="cart-product-name-title">
+                            Nome
+                        </td>
+                        <td class="cart-product-price-title">
+                            Preço
+                        </td>
+                        <td class="cart-product-qtd-title">
+                            Qtd.
+                        </td>
+                        <td class="cart-product-total-title">
+                            Total
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="cart-body">
+        <div class="wrap">
+            <table>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="cart-buttons">
+        <div class="wrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="cart-checkout-buttons">
+                            <ul class="navigation navigation-buttons">
+                                <li>
+                                    @if (ViewBag.IsCartPage == null)
+                                    {
+                                        <a href="/produto/carrinho" id="btn-my-cart" class="btn btn-type-2">Meu carrinho</a>                                        
+                                    }
+                                    else
+                                    {
+                                        <a href="/" class="btn btn-type-2">Continuar Comprando</a>
+                                    }
+                                </li>
+                                <li>
+                                    <a href="/Checkout/EfetuarPagamento" id="btn-checkout" class="btn btn-type-3">Checkout</a>
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="cart-total-products">
+                            Total: <span class="cart-total-price-products">R$ <span class="price">0</span></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

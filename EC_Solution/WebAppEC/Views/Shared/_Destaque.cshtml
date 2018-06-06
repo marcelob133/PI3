@@ -1,0 +1,30 @@
+﻿@model WebAppEC.Models.Produto
+
+<li class="product">
+    <a id="product-@Model.idProduto" href="javascript:;" data-product-id="@Model.idProduto">
+        @{
+            string imgProduct = string.Empty, nameProduct = string.Empty;
+            string price = Convert.ToDecimal(Model.precProduto - (decimal)Model.descontoPromocao).ToString("#,##.00");
+
+            if (Model.imagem != null)
+            {
+                string base64String = Convert.ToBase64String(Model.imagem);
+                imgProduct = "data:image/png;base64," + base64String;
+                nameProduct = @Model.nomeProduto;
+            }
+            else
+            {
+                imgProduct = "/img/default_product.png";
+                nameProduct = "Não foi possível encontrar a imagem do produto.";
+            }
+
+            <img src=@imgProduct class="product-image" alt="@nameProduct" title="@nameProduct" />
+        }
+        <div class="product-info">
+            <h2 class="product-name">@Html.DisplayFor(model => model.nomeProduto)</h2>
+            <span class="product-price">R$ @price</span>
+        </div>
+    </a>
+     
+    <button type="button" class="add-cart" data-product-id="@Model.idProduto" data-product-name="@Model.nomeProduto" data-product-price="@Model.precProduto"><i class="icon icon-basket"></i></button>           
+</li>

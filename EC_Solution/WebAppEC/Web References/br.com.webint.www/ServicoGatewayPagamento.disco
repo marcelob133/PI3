@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://www.webint.com.br/WS/ServicoGatewayPagamento.asmx?wsdl" docRef="http://www.webint.com.br/WS/ServicoGatewayPagamento.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://www.webint.com.br/WS/ServicoGatewayPagamento.asmx" xmlns:q1="http://www.webint.com.br/" binding="q1:CGatewayPagamentoSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://www.webint.com.br/WS/ServicoGatewayPagamento.asmx" xmlns:q2="http://www.webint.com.br/" binding="q2:CGatewayPagamentoSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,56 @@
+﻿@model WebAppEC.Models.Checkout
+
+@{
+    ViewBag.Title = "Pagamento";
+}
+
+<section id="checkout">
+    <div class="wrap">
+        <div id="content-checkout-form" class="content-form">
+            @using (Html.BeginForm())
+            {
+                <h2>Efetuar Pagamento</h2>
+
+                @Html.ValidationSummary(true)
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.NomeImpresso, new { @placeholder = "Nome do titular do cartão", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.NomeImpresso)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.NumeroCartao, new { @placeholder = "Número do cartão", @class = "form-control", maxlength = "16" })
+                    @Html.ValidationMessageFor(model => model.NumeroCartao)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.Vencimento, new { @placeholder = "Data de Vencimento", @class = "form-control form-control-type-2", type = "month" })
+                    @Html.ValidationMessageFor(model => model.Vencimento)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.CodSeguranca, new { @placeholder = "Código de Segurança", @class = "form-control form-control-type-2", maxlength = "3" })
+                    @Html.ValidationMessageFor(model => model.CodSeguranca)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.Valor, new { @placeholder = "Valor", @class = "form-control form-control-type-2", @disabled = "disabled"})
+                    @Html.ValidationMessageFor(model => model.Valor)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.Parcelas, new { @placeholder = "Quantidade de parcelas", @class = "form-control form-control-type-2", type = "number", max = "12" })
+                    @Html.ValidationMessageFor(model => model.Parcelas)
+                </div>
+
+                <div class="form-item">
+                    <button type="submit" class="btn btn-type-1">Finalizar compra</button>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

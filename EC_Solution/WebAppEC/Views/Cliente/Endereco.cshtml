@@ -1,0 +1,68 @@
+﻿@model WebAppEC.Models.Endereco
+
+@{
+    ViewBag.Title = "Cadastrar meu endereço";
+}
+
+<section id="Endereco">
+    <div class="wrap">
+        <div id="content-address-form" class="content-form">
+            <h2>@ViewBag.Title</h2>
+            @using (Html.BeginForm())
+            {
+
+                @Html.ValidationSummary(true)
+
+                @Html.HiddenFor(model => model.idCliente)
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.CEPEndereco, new { @class = "form-control form-control-type-2", placeholder = "CEP" })
+                    @Html.ValidationMessageFor(model => model.CEPEndereco)
+                </div>
+                
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.logradouroEndereco, new { @class = "form-control", placeholder = "Logradouro" })
+                    @Html.ValidationMessageFor(model => model.logradouroEndereco)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.nomeEndereco, new { @class = "form-control", placeholder = "Endereço" })
+                    @Html.ValidationMessageFor(model => model.nomeEndereco)
+                </div>                
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.numeroEndereco, new { @class = "form-control form-control-type-2", placeholder = "Número" })
+                    @Html.ValidationMessageFor(model => model.numeroEndereco)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.complementoEndereco, new { @class = "form-control form-control-type-2", placeholder = "Complemento" })
+                    @Html.ValidationMessageFor(model => model.complementoEndereco)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.cidadeEndereco, new { @class = "form-control", placeholder = "Cidade" })
+                    @Html.ValidationMessageFor(model => model.cidadeEndereco)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.paisEndereco, new { @class = "form-control form-control-type-2", placeholder = "País" })
+                    @Html.ValidationMessageFor(model => model.paisEndereco)
+                </div>
+
+                <div class="form-item">
+                    @Html.TextBoxFor(model => model.UFEndereco, new { @class = "form-control form-control-type-2", placeholder = "UF" })
+                    @Html.ValidationMessageFor(model => model.UFEndereco)
+                </div>
+
+                <div class="form-item">
+                    <input type="submit" value="Cadastrar" class="btn btn-type-1" />                                        
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

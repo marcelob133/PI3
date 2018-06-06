@@ -1,0 +1,76 @@
+﻿@model IEnumerable<WebAppEC.Models.PedidoDetalhesViewModel>
+
+@{
+    ViewBag.Title = "Detalhes do Pedido";
+}
+
+<p class="content-form">@ViewBag.Pedido</p>
+
+<section id="cart">
+    <div class="table">
+        <div class="wrap">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td class="cart-product-photo-title">
+                            @Html.DisplayNameFor(model => model.imagem)
+                        </td>
+                        <td class="cart-product-name-title">
+                            @Html.DisplayNameFor(model => model.nomeProduto)
+                        </td>
+                        <td class="cart-product-price-title">
+                            @Html.DisplayNameFor(model => model.precoVendaItem)
+                        </td>
+                        <td class="cart-product-qtd-title">
+                            @Html.DisplayNameFor(model => model.qtdProduto)
+                        </td>
+                        <td class="cart-product-total-title">
+                            Total
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>&nbsp;</tr>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            string total = Convert.ToDecimal(item.precoVendaItem * (decimal)item.qtdProduto).ToString("#,##.00");
+                            <tr>
+                                <td>
+                                    @{
+                                        string imgProduct = string.Empty, nameProduct = string.Empty;
+
+                                        if (item.imagem != null)
+                                        {
+                                            string base64String = Convert.ToBase64String(item.imagem);
+                                            imgProduct = "data:image/png;base64," + base64String;
+                                            nameProduct = @item.nomeProduto;
+                                        }
+                                        else
+                                        {
+                                            imgProduct = "/img/default_product.png";
+                                            nameProduct = "Não foi possível encontrar a imagem do produto.";
+                                        }
+                                    }
+                                    <img src=@imgProduct class="cart-product-photo-detalhe" alt="@nameProduct" title="@nameProduct" />
+                                </td>
+                                <td>
+                                    <span class="product-name">@item.nomeProduto</span>
+                                </td>
+                                <td>
+                                    <span class="product-price">@item.precoVendaItem.ToString("#,##.00")</span>
+                                </td>
+                                <td>
+                                    <span class="product-qtd">@item.qtdProduto</span>
+                                </td>
+                                <td>
+                                    <span class="produt-price">R$ @total</span>
+                                </td>
+                            </tr>
+                                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

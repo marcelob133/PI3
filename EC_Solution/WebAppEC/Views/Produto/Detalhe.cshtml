@@ -1,0 +1,51 @@
+﻿@model WebAppEC.Models.Produto
+
+@{
+    ViewBag.Title = string.IsNullOrEmpty(ViewBag.NomeCategoria) ? "Todos os produtos" : ViewBag.NomeCategoria;
+}
+
+<section id="product-details">
+    <div class="wrap">
+        <div class="content-product-image">
+            @{
+                string imgProduct = string.Empty, nameProduct = string.Empty;
+                string price = Convert.ToDecimal(Model.precProduto - Model.descontoPromocao).ToString("#,##.00");
+                string descricao = Model.descProduto != null ? Model.descProduto : "Descrição indisponível" ;
+
+                if (Model.imagem != null)
+                {
+                    string base64String = Convert.ToBase64String(Model.imagem);
+                    imgProduct = "data:image/png;base64," + base64String;
+                    nameProduct = @Model.nomeProduto;
+                }
+                else
+                {
+                    imgProduct = "/img/default_product.png";
+                    nameProduct = "Não foi possível encontrar a imagem do produto.";
+                }                                
+            }
+            <img src=@imgProduct class="product-image" alt="@nameProduct" title="@nameProduct" />
+        </div>
+        <div class="product-info">
+            <h1 class="product-name">@Html.DisplayFor(model => model.nomeProduto)</h1>
+            <p class="product-description">@descricao</p>
+            <div class="product-price-info">
+                @if(@Model.descontoPromocao == null || @Model.descontoPromocao == 0)
+                {
+                    <span class="label">Por apenas</span>  
+                }
+                else
+                {
+                    <span class="old-price">De: R$ <span>@Html.DisplayFor(model => model.precProduto)</span></span>  
+                }          
+                <span class="current-price">R$ @price</span>
+            </div> 
+            <div class="product-qtd-info">
+                <span>Quantidade:</span>
+                <input class="product-qtd" type="text" value="1" maxlength="2">
+            </div>
+            <span class="product-available">Disponível em estoque</span>
+            <a href="javascript:;" class="btn btn-type-1 add-cart" data-product-id="@Model.idProduto" data-product-name="@Model.nomeProduto" data-product-price="@price">ADICIONAR AO CARRINHO</a>
+        </div>
+    </div>
+</section>

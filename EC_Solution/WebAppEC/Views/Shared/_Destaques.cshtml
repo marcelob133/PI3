@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebAppEC.Models.Produto>
+
+<section id="featured-products">
+    <div class="wrap">
+        <ul class="products">
+            @foreach (var item in Model)
+            {
+                string imgProduct = string.Empty;
+                string nameProduct = string.Empty;
+                string price = string.Empty;
+                if (item != null)
+                {
+                    <li class="product">
+                        price = Convert.ToDecimal(item.precProduto - (decimal)item.descontoPromocao).ToString("#,##.00");
+                        if (item.precProduto > 0)
+                        {
+                        if (item.imagem != null)
+                        {
+                        string base64String = Convert.ToBase64String(item.imagem);
+                        imgProduct = "data:image/png;base64," + base64String;
+                        nameProduct = @item.nomeProduto;
+                        }
+                        else
+                        {
+                        imgProduct = "/img/default_product.png";
+                        nameProduct = "Não foi possível encontrar a imagem do produto.";
+                        }
+                        <a id="product-@item.idProduto" href="~/produto/detalhe/@item.idProduto" data-product-id="@item.idProduto" data-product-name="@item.nomeProduto" data-product-price="@price">
+                            <img src=@imgProduct class="product-image" alt="@nameProduct" title="@nameProduct" />
+                            <div class="product-info">
+                                <h2 class="product-name">@item.nomeProduto</h2>
+                                <span class="product-price">R$ @price</span>
+                            </div>
+                        </a>
+                        <button type="button" class="add-cart" data-product-id="@item.idProduto" data-product-name="@item.nomeProduto" data-product-price="@price"><i class="icon icon-basket"></i></button>
+                        }
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</section>

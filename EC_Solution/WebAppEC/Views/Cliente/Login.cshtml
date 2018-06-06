@@ -1,0 +1,36 @@
+﻿ @model WebAppEC.Models.ClienteViewModel
+
+@{
+    ViewBag.Title = "Acesse sua conta";
+}
+
+<section id="login">    
+    <div class="wrap">
+        <div id="content-login-form" class="content-form">
+            <h2>@ViewBag.Title</h2>
+            @*ReturnUrl = @Request.Url*@
+            @using (Html.BeginForm("Login", "Cliente", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+            {
+                @Html.ValidationSummary(true)
+                <div class="form-item">
+                    @Html.TextBoxFor(m => m.emailCliente, new { @class = "form-control", placeholder = "Email" })
+                    @Html.ValidationMessageFor(m => m.emailCliente)
+                </div>
+                <div class="form-item">
+                    @Html.PasswordFor(m => m.senhaCliente, new { @class = "form-control", placeholder = "Senha" })
+                    @Html.ValidationMessageFor(m => m.senhaCliente)
+                    @Html.ValidationMessage("UserOrPasswordInvalid")
+                </div>
+                <div class="form-item">
+                    <input type="submit" value="Entrar" class="btn btn-type-1" />
+                </div>
+                <br/>
+                <div class="alert-danger">@ViewBag.Mensagem</div>
+            }
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

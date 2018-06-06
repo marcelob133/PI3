@@ -1,0 +1,101 @@
+﻿@model WebAppEC.Models.Cliente
+
+@{
+    ViewBag.Title = "Criar minha conta";
+}
+
+<section id="account">
+    <div class="wrap">
+        <div id="content-account-form" class="content-form">
+            <h2>Criar minha conta</h2>
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+                <div class="form-item">
+                    @*Html.LabelFor(model => model.nomeCompletoCliente, htmlAttributes: new { @class = "control-label col-md-4 " })*@
+                    @Html.TextBoxFor(model => model.nomeCompletoCliente, 
+                        new { @class = "form-control", placeholder = "Nome Completo" })
+                    @Html.ValidationMessageFor(model => model.nomeCompletoCliente)
+                </div>
+
+                <div class="form-item">
+                    @*Html.LabelFor(model => model.emailCliente, htmlAttributes: new { @class = "control-label col-md-4 glyphicon glyphicon-envelope" })*@
+                    @Html.TextBoxFor(model => model.emailCliente, 
+                        new { @class = "form-control", placeholder = "E-mail" })
+                    @Html.ValidationMessageFor(model => model.emailCliente)
+                </div>                
+
+                <div class="form-item">
+                    @*Html.LabelFor(model => model.CPFCliente, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                    <div class="control-label col-md-4 glyphicon glyphicon-phone"></div>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(model => model.CPFCliente, 
+                            new { @class = "form-control", maxlength = "11", placeholder = "CPF" })
+                        @Html.ValidationMessageFor(model => model.CPFCliente)
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    @*Html.LabelFor(model => model.celularCliente, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                    @Html.TextBoxFor(model => model.celularCliente, 
+                        new { @class = "form-control", placeholder = "Celular" })
+                    @Html.ValidationMessageFor(model => model.celularCliente)
+                </div>
+
+                <div class="form-item">
+                    @*Html.LabelFor(model => model.telComercialCliente, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                    @Html.TextBoxFor(model => model.telComercialCliente, 
+                        new { @class = "form-control", placeholder = "Telefone Comercial" })
+                    @Html.ValidationMessageFor(model => model.telComercialCliente)
+                </div>
+
+                <div class="form-item">
+                    @*Html.LabelFor(model => model.telResidencialCliente, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                    @Html.TextBoxFor(model => model.telResidencialCliente, 
+                        new { @class = "form-control", placeholder = "Telefone Residencial" })
+                    @Html.ValidationMessageFor(model => model.telResidencialCliente)
+                </div>
+
+                <div class="form-item">
+                    @*Html.LabelFor(model => model.dtNascCliente, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                    @Html.TextBoxFor(model => model.dtNascCliente, 
+                        new { @class = "form-control form-control-type-2", max = "1997-12-31", placeholder = "Data de Nascimento" })
+                    @Html.ValidationMessageFor(model => model.dtNascCliente)
+                </div>
+
+                <div class="form-item">
+                    @*Html.LabelFor(model => model.senhaCliente, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                    @Html.TextBoxFor(model => model.senhaCliente, 
+                        new { @class = "form-control form-control-type-2", type = "password", placeholder = "Senha" })
+                    @Html.ValidationMessageFor(model => model.senhaCliente)
+                </div>
+
+                <div class="form-item">
+                    @*Html.LabelFor(model => model.confirmarSenha, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                    @Html.TextBoxFor(model => model.confirmarSenha, 
+                        new { @class = "form-control form-control-type-2", type = "password", placeholder = "Confirmar Senha" })
+                    @Html.ValidationMessageFor(model => model.confirmarSenha)
+                </div>
+
+                <div class="form-item">
+                    @Html.CheckBoxFor(model => model.recebeNewsLetter)
+                    @Html.LabelFor(model => model.recebeNewsLetter, htmlAttributes: 
+                        new { @class = "control-label" })
+                    @Html.ValidationMessageFor(model => model.recebeNewsLetter)
+                    @*Html.RadioButtonFor(model => model.recebeNewsLetter, "false") Não*@
+                    @*Html.RadioButtonFor(model => model.recebeNewsLetter, "true") Sim*@                    
+                    @*@Html.EditorFor(model => model.recebeNewsLetter)*@                    
+                </div>
+
+                <div class="form-item">
+                    <input type="submit" value="Continuar" class="btn btn-type-1" />
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

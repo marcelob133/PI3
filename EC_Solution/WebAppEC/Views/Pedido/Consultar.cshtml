@@ -1,0 +1,71 @@
+﻿@model IEnumerable<WebAppEC.Models.PedidoViewModel>
+
+@{
+    ViewBag.Title = "Meus Pedidos";
+}
+
+<p class="title-page">MEUS PEDIDOS</p>
+
+<section id="cart">
+    <div class="cart-header">
+        <div class="wrap">
+            <table class="table">
+                <tr>
+                    <td class="cart-product-name-title">
+                        @Html.DisplayNameFor(model => model.idPedido)
+                    </td>
+                    <td class="cart-product-name-title">
+                        @Html.DisplayNameFor(model => model.nomeCompletoCliente)
+                    </td>
+                    <td class="cart-product-name-title">
+                        @Html.DisplayNameFor(model => model.descStatus)
+                    </td>
+                    <td class="cart-product-name-title">
+                        @Html.DisplayNameFor(model => model.dataPedido)
+                    </td>
+                    <td class="cart-product-name-title">
+                        @Html.DisplayNameFor(model => model.descTipoPagto)
+                    </td>
+                    <td class="cart-product-price-title">
+                        @Html.DisplayNameFor(model => model.totalPagto)
+                    </td>
+                    <td>Detalhes</td>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    if (Model != null)
+                    {
+                        <tr>
+                            <td class="cart-product-qtd-item">
+                                @Html.DisplayFor(m => item.idPedido)
+                            </td>
+                            <td class="cart-product-name-item">
+                                @Html.DisplayFor(m => item.nomeCompletoCliente)
+                            </td>
+                            <td class="cart-product-name-item">
+                                @Html.DisplayFor(m => item.descStatus)
+                            </td>
+                            <td class="cart-product-name-item">
+                                @Html.DisplayFor(m => item.dataPedido)
+                            </td>
+                            <td class="cart-product-name-item">
+                                @Html.DisplayFor(m => item.descTipoPagto)
+                            </td>
+                            <td class="cart-product-total-item">
+                                @Html.DisplayFor(m => item.totalPagto)
+                            </td>
+                            <td>
+                                @using (Html.BeginForm("Detalhes", "Pedido", FormMethod.Post))
+                                {
+                                    @Html.Hidden("pedido", item.idPedido);
+                                    @Html.Hidden("total", item.totalPagto);
+                                    <input title="Clique aqui para obter detalhes sobre este pedido..." type="submit" value="...">
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppEC", "WebAppEC\WebAppEC.csproj", "{B2B5151A-BEE2-4760-B4AC-354044949A3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2B5151A-BEE2-4760-B4AC-354044949A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B5151A-BEE2-4760-B4AC-354044949A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B5151A-BEE2-4760-B4AC-354044949A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B5151A-BEE2-4760-B4AC-354044949A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://lucianogonzagaleme.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = WebAppEC\\WebAppEC.csproj
+		SccProjectName0 = WebAppEC
+		SccLocalPath0 = WebAppEC
+		SccLocalPath1 = .
+	EndGlobalSection
+EndGlobal

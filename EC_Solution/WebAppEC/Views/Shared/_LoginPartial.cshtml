@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Cliente", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "logoutForm" }))
+    {
+        <nav class="navigation navigation-buttons account-actions user-logged">
+            <ul>
+                <li>@Html.ActionLink(" Olá " + @User.Identity.GetUserName(), "Consultar", "Pedido", routeValues: null, htmlAttributes: new { id = "btn-create-account", @class = "btn btn-type-2", title = "Clique aqui para ver seus pedidos..." })
+                    @*<div class="btn btn-type-2">Olá&nbsp;@User.Identity.GetUserName()</div>*@
+                    @*<a class="btn btn-type-2 profile"><i class="icon icon-user"></i> Olá @User.Identity.GetUserName()</a>*@
+                </li>
+                <li><button type="submit" class="btn btn-type-1">Sair</button></li>
+            </ul>
+        </nav>
+    }
+}
+else
+{
+    <nav class="navigation navigation-buttons account-actions">
+        <ul>
+            <li>@Html.ActionLink("Criar conta", "Cadastrar", "Cliente", routeValues: null, htmlAttributes: new { id = "btn-create-account", @class="btn btn-type-2" })</li>
+            <li>@Html.ActionLink("Login", "Login", "Cliente", routeValues: new { ReturnUrl = ViewBag.ReturnUrl }, htmlAttributes: new { id = "btn-login", @class = "btn btn-type-1" })</li>
+        </ul>
+    </nav>
+}

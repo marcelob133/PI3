@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Meu Carrinho";
+}
+
+<section id="my-cart">
+    <div class="wrap">
+        <h2 class="title-page">@ViewBag.Title</h2>
+
+        <div id="cart-body-page">
+            @Html.Partial("_Carrinho")
+        </div>
+    </div>
+</section>
