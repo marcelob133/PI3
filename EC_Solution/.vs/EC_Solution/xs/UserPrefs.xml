@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{B2B5151A-BEE2-4760-B4AC-354044949A3F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebAppEC/Views/Produto/Categoria.cshtml">
+    <Files>
+      <File FileName="WebAppEC/Content/css/listCcategoria.css" Line="38" Column="17" />
+      <File FileName="WebAppEC/Views/Produto/Categoria.cshtml" Line="64" Column="178" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WebAppEC PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -34,7 +34,8 @@ namespace WebAppEC
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/css/app.css",
                       "~/Content/css/jquery-ui.css",
-                      "~/Content/css/jquery-ui.theme.css"));
+                      "~/Content/css/jquery-ui.theme.css",
+                "~/Content/css/listCcategoria.css"));
 
         }
     }
