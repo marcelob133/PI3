@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{B2B5151A-BEE2-4760-B4AC-354044949A3F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebAppEC/Views/Produto/Categoria.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebAppEC/Content/css/app.css">
     <Files>
-      <File FileName="WebAppEC/Content/css/listCcategoria.css" Line="38" Column="17" />
-      <File FileName="WebAppEC/Views/Produto/Categoria.cshtml" Line="64" Column="178" />
+      <File FileName="WebAppEC/Content/css/listCcategoria.css" Line="47" Column="1" />
+      <File FileName="WebAppEC/Views/Produto/Categoria.cshtml" Line="72" Column="66" />
+      <File FileName="WebAppEC/Content/css/app.css" Line="721" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

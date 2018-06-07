@@ -173,5 +173,27 @@ namespace WebAppEC.Controllers
         {
             return View();
         }
+
+        public ActionResult Senha()
+        {
+            return View();
+        }
+  
+        [HttpPost]
+        public ActionResult Senha(EsqueciSenhaViewModel model)
+        {
+            string senha = db.Clientes.Where(m => m.emailCliente == model.emailCliente).FirstOrDefault().senhaCliente;
+            Email objM = new Email();
+            objM.DispararEmail(model.emailCliente, senha);
+            if (senha.Length > 0)
+            {
+                ViewBag.msg = "Senha enviada com sucesso!";
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+        }
     }
 }

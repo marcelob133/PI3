@@ -7,26 +7,28 @@
 <section id="login">    
     <div class="wrap">
         <div id="content-login-form" class="content-form">
-            <h2>@ViewBag.Title</h2>
+            <h2><span class="glyphicon glyphicon-user"> </span> @ViewBag.Title</h2>
             @*ReturnUrl = @Request.Url*@
             @using (Html.BeginForm("Login", "Cliente", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
-            {
-                @Html.ValidationSummary(true)
-                <div class="form-item">
-                    @Html.TextBoxFor(m => m.emailCliente, new { @class = "form-control", placeholder = "Email" })
-                    @Html.ValidationMessageFor(m => m.emailCliente)
-                </div>
-                <div class="form-item">
-                    @Html.PasswordFor(m => m.senhaCliente, new { @class = "form-control", placeholder = "Senha" })
-                    @Html.ValidationMessageFor(m => m.senhaCliente)
-                    @Html.ValidationMessage("UserOrPasswordInvalid")
-                </div>
-                <div class="form-item">
-                    <input type="submit" value="Entrar" class="btn btn-type-1" />
-                </div>
-                <br/>
-                <div class="alert-danger">@ViewBag.Mensagem</div>
-            }
+    {
+        @Html.ValidationSummary(true)
+        <div class="form-item">
+            @Html.TextBoxFor(m => m.emailCliente, new { @class = "form-control", placeholder = "Email" })
+            @Html.ValidationMessageFor(m => m.emailCliente)
+        </div>
+        <div class="form-item">
+            <a href="#" class="btn btn-link btn-esqueceu">@Html.ActionLink("Esqueceu sua senha?", "Senha") </a>
+            @Html.PasswordFor(m => m.senhaCliente, new { @class = "form-control", placeholder = "Senha" })
+            @Html.ValidationMessageFor(m => m.senhaCliente)
+            @Html.ValidationMessage("UserOrPasswordInvalid")
+        </div>
+        <div class="form-item">
+            <input type="submit" value="Entrar" class="btn btn-type-1 btn-success" />
+        </div>
+        <span>Não tem uma conta? @Html.ActionLink("Cadastre-se", "Cadastrar") </span>
+        <br />
+        <div class="alert-danger">@ViewBag.Mensagem</div>
+}
         </div>
     </div>
 </section>

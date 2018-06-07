@@ -32,9 +32,12 @@ html{
     min-height: 100%;
 }
 body {
-	line-height: 1;
-	color: #1f1f1f;
-    margin-bottom: 80px;
+    line-height: 1;
+    color: #1f1f1f;
+    background: url(../img/body-bg2.png) repeat 0 0;
+    background-size: 250px auto;
+    background-color: #eaebec;
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -499,8 +502,7 @@ body{
 .content-form{
     margin: 0 auto;
     padding: 40px;
-    border: 1px solid #dedede;
-    border-top: 5px solid #33b5e5;
+    border: 2px solid black;
     border-radius: 5px;
 }
 
@@ -535,7 +537,6 @@ body{
 }
 
 .form-item .form-control:focus {
-    width: 105%;
     color: #1a1a1a;
 	border-color: #33b5e5;
 }
@@ -612,6 +613,102 @@ body{
 =======================================================
 */
 
+<<<<<<< HEAD
+=======
+.products{
+	width: 100%;
+}
+
+.products .product{
+	float: left;
+	width: 23.0234375%;
+	margin: 0 .9765625%;
+}
+
+.product-image{
+	display: block;
+}
+
+.product .product-image{
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+    transition: all .2s ease-out;
+    background-color: white;
+}
+
+.product a{
+	text-decoration: none;
+}
+
+.product-name,
+.product-price{
+	color: #1f1f1f;
+	font-weight: bold;
+}
+
+.product .product-name,
+.product .product-price{
+	font-size: 14px;
+	text-align: center;
+	transition: all .2s ease-out;
+}
+
+.product .product-name{
+	position: relative;
+    height: 30px;   
+	margin: 25px 0;
+}
+
+.product .add-cart{
+	display: block;
+	width: 25%;
+	padding: 10px;
+	margin: 15px auto;
+	background: #33b5e5;
+	color: #fff;
+	border: 2px solid #33b5e5;
+	cursor: pointer;
+	outline: none;
+    transition: all .2s ease-out;
+}
+
+.product .add-cart:hover{
+	background: #fff;
+	color: #33b5e5;	
+}
+
+.product .product-name:before{
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	width: 25px;
+	height: 5px;
+	background: #1f1f1f;
+	content: '';
+	transform: translateX(-50%);
+	transition: all .2s ease-out;
+}
+
+.product .product-price{
+	display: block;
+    margin: 35px 0 25px;
+}
+
+.product a:hover .product-name,
+.product a:hover .product-price{
+	color: #33b5e5;
+}
+
+.product a:hover .product-image{
+    transform: scale(1);
+}
+
+.product a:hover .product-name:before{
+	background: #33b5e5;
+}
+
+>>>>>>> 5ddb8ab95ca9522a533ee725660add63902da6cf
 /*
 =======================================================
 	PRODUCT DETAILS
@@ -640,6 +737,7 @@ product-details .content-product-image {
     margin-bottom: 30px;
 }
 
+<<<<<<< HEAD
 #product-details .product-description {
     padding: 20px 0;
     border-width: 1px 0;
@@ -647,6 +745,12 @@ product-details .content-product-image {
     border-color: #dedede;
     font-size: 16px;
     line-height: 22px;
+=======
+#product-details .product-description{
+	padding: 20px 0;
+	font-size: 16px;
+	line-height: 22px;
+>>>>>>> 5ddb8ab95ca9522a533ee725660add63902da6cf
 }
 
 #product-details .old-price,
@@ -713,13 +817,35 @@ product-details .content-product-image {
 =======================================================
 */
 
-#footer{
-    position: absolute;
-    bottom: 0;
-	width: 100%;
-    height: 20px;
-	padding: 30px 0;
-	background: #1f1f1f;
+#footer {
+    padding: 20px 0;
+    background-color: #00BCD4;
+    width: 100%;
+    border-top: 5px solid white;
+}
+
+#footer h3{
+    font-size: 17px;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#footer ul{
+    border-left: 3px solid black;
+    padding-left: 15px;
+}
+
+#footer li{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}
+#footer a{
+    color: white;
+}
+#footer li a:hover {
+    text-decoration: none;
 }
 
 #footer p{
@@ -727,21 +853,76 @@ product-details .content-product-image {
 	text-align: center;
 }
 
+#footer .pagtos-container .pagtos .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer .pagtos li:not(:first-child) img {
+    -webkit-filter: opacity(.2);
+    filter: opacity(.2);
+}
+#footer .pagtos li{
+    padding: 0 10px 2px 10px;
+}
+#footer .navigation-menu li{
+    float: none;
+    padding-bottom: 5px;
+}
+#footer .navigation-menu ul{
+    min-height: 110px;
+}
+
+#footer .navigation-menu li a{
+    display:block;
+    padding: 0px;
+    background: none;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
+#footer .row{
+    min-height: 150px;
+}
+#footer .menu{
+    background: none;
+}
+#footer button.btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all .3s linear;
+    margin-left: -2px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+#footer button.btn:hover {
+    background: white;
+    border: 1px solid #fff;
+    color: #455A64;
+}
+#footer .sobre li, #footer .minha-conta li{
+    padding-top: 4px;
+}
+#footer p{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
 /*
 =======================================================
 	OVERLAY
 =======================================================
 */
-
-.overlay{
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	opacity: .75;
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .75;
 }
 
 /*
@@ -791,4 +972,13 @@ thead:before {
     line-height: 1em !important;
     color: transparent !important;
     font-weight: bold !important;
+}
+
+/*
+=======================================================
+	NOVOS CSS
+=======================================================
+*/
+.layout footer#footer {
+
 }

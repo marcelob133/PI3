@@ -1,0 +1,36 @@
+﻿#login h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: black;
+}
+#login #content-login-form {
+    background-color: white;
+    max-width: 350px;
+    width: 100%;
+}
+#login a.btn.btn-link.btn-esqueceu {
+    display: none;
+}
+#login .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    font-family: 'Press Start 2P', cursive;
+    border: 1px solid black;
+}
+#login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+#login span {
+    margin-top: 10px;
+}
+#login input {
+    color: white;
+    background-color: #00bcd4;
+}
+#login input::placeholder{
+    color:white;
+}

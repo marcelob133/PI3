@@ -5,8 +5,8 @@
 }
 
 <section id="product-details">
-    <div class="wrap">
-        <div class="content-product-image">
+    <div class="wrap row">
+        <div class="content-product-image col-lg-4 col-md-4 col-sm-4">
             @{
             string desconto;
             string imgProduct = string.Empty, nameProduct = string.Empty;
@@ -37,44 +37,46 @@
             }
             <img src=@imgProduct class="product-image" alt="@nameProduct" title="@nameProduct" />
         </div>
-        <div class="product-info">
+        <div class="product-info col-lg-8 col-md-8 col-sm-8">
             <h1 class="product-name">@Html.DisplayFor(model => model.nomeProduto)</h1>
 
             <span id="codigo-produto">(Cód. do Produto nº @Html.DisplayFor(modelItem => Model.idProduto) )</span>
-            <div>
+            <div id="delivery-gandalf">
                 <span>Vendido e entregue por <b>Gandalf</b> Store</span>
             </div>
 
-            <p class="product-description"> <b>Sobre:</b> @descricao</p>
-            <div class="product-price-info">
-                @if (@Model.descontoPromocao == null || @Model.descontoPromocao == 0)
-        {
-            <span class="label">Por apenas</span>
-}
-else
-{
-        <div id="desconto-produto">@desconto% OFF</div>
-        <span class="old-price">De: R$ <span>@Html.DisplayFor(model => model.precProduto)</span></span>
-}
-                <span class="current-price">R$ @price</span>
-            </div>
-            <div class="product-qtd-info">
-                <span>Quantidade:</span>
-                <input class="product-qtd" type="text" value="1" maxlength="2">
-            </div>
-            <span class="product-available">Disponível em estoque</span>
-            @if (Model.descontoPromocao != 0)
-            {
-                <span class="product-promotion">Promoção!</span>
-            }
+            <p class="product-description"> <b>Sobre:</b> <br /> @descricao</p>
+            <div class="container-detalhe-produto">
+                <div class="product-price-info">
+                    @if (@Model.descontoPromocao == null || @Model.descontoPromocao == 0)
+                    {
+                    <span class="label">Por apenas</span>
+                    }
+                    else
+                    {
+                    <div id="desconto-produto">@desconto% OFF</div>
+                    <span class="old-price">De: R$ <span>@Html.DisplayFor(model => model.precProduto)</span></span>
+                    }
+                    <p id="price-product">por<span class="current-price">R$ @price</span></p>
+                <span>
+                @{
+                string parcelPrice = Convert.ToDecimal(Model.precProduto / 3).ToString("#,#0.00");
+                }
+                 </span>
+                    <p id="juros">Ou em <span class="color-destaque">3x</span> de <span class="color-destaque">R$@parcelPrice</span> sem juros e sem desconto </p>
+                </div>
+                <div class="product-qtd-info">
+                    <span>Quantidade:</span>
+                    <input class="product-qtd" type="text" value="1" maxlength="2">
+                </div>
+                <span class="product-available">Produto em estoque</span>
+                @if (Model.descontoPromocao != 0)
+                {
+                    <span class="product-promotion">Promoção!</span>
+                }
 
-            <a href="javascript:;" class="btn btn-type-1 add-cart" data-product-id="@Model.idProduto" data-product-name="@Model.nomeProduto" data-product-price="@price">ADICIONAR AO CARRINHO</a>
+                <a href="javascript:;" class="btn btn-type-1 add-cart special-button" data-product-id="@Model.idProduto" data-product-name="@Model.nomeProduto" data-product-price="@price">ADICIONAR AO CARRINHO</a>
+            </div>
         </div>
-        <span>
-            @{
-            string parcelPrice = Convert.ToDecimal(Model.precProduto / 3).ToString("#,#0.00");
-            }
-            Ou em <span class="color-destaque">3x</span> de <span class="color-destaque">R$@parcelPrice</span> sem juros e sem desconto
-        </span>
     </div>
 </section>
