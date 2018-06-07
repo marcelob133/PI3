@@ -38,7 +38,8 @@ namespace WebAppEC
                       "~/Content/css/pagamento.css",
                       "~/Content/css/detalheProduto.css",
                       "~/Content/css/jquery-ui.css",
-                      "~/Content/css/jquery-ui.theme.css"));
+                      "~/Content/css/jquery-ui.theme.css",
+                "~/Content/css/listCcategoria.css"));
 
         }
     }
