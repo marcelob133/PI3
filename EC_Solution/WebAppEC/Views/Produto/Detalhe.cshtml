@@ -8,44 +8,73 @@
     <div class="wrap">
         <div class="content-product-image">
             @{
-                string imgProduct = string.Empty, nameProduct = string.Empty;
-                string price = Convert.ToDecimal(Model.precProduto - Model.descontoPromocao).ToString("#,##.00");
-                string descricao = Model.descProduto != null ? Model.descProduto : "Descrição indisponível" ;
+            string desconto;
+            string imgProduct = string.Empty, nameProduct = string.Empty;
+            string price = Convert.ToDecimal(Model.precProduto - Model.descontoPromocao).ToString("#,##.00");
+            string descricao = Model.descProduto != null ? Model.descProduto : "Descrição indisponível";
+            decimal calDesconto = ((decimal)Model.descontoPromocao - 1);
 
-                if (Model.imagem != null)
-                {
-                    string base64String = Convert.ToBase64String(Model.imagem);
-                    imgProduct = "data:image/png;base64," + base64String;
-                    nameProduct = @Model.nomeProduto;
-                }
-                else
-                {
-                    imgProduct = "/img/default_product.png";
-                    nameProduct = "Não foi possível encontrar a imagem do produto.";
-                }                                
+            if (calDesconto % 1 == 0)
+            {
+                desconto = (calDesconto).ToString("#,#0");
+            }
+            else
+            {
+                desconto = ((decimal)Model.descontoPromocao - 1).ToString("#,#0.00");
+            }
+
+            if (Model.imagem != null)
+            {
+                string base64String = Convert.ToBase64String(Model.imagem);
+                imgProduct = "data:image/png;base64," + base64String;
+                nameProduct = @Model.nomeProduto;
+            }
+            else
+            {
+                imgProduct = "/img/default_product.png";
+                nameProduct = "Não foi possível encontrar a imagem do produto.";
+            }
             }
             <img src=@imgProduct class="product-image" alt="@nameProduct" title="@nameProduct" />
         </div>
         <div class="product-info">
             <h1 class="product-name">@Html.DisplayFor(model => model.nomeProduto)</h1>
-            <p class="product-description">@descricao</p>
+
+            <span id="codigo-produto">(Cód. do Produto nº @Html.DisplayFor(modelItem => Model.idProduto) )</span>
+            <div>
+                <span>Vendido e entregue por <b>Gandalf</b> Store</span>
+            </div>
+
+            <p class="product-description"> <b>Sobre:</b> @descricao</p>
             <div class="product-price-info">
-                @if(@Model.descontoPromocao == null || @Model.descontoPromocao == 0)
-                {
-                    <span class="label">Por apenas</span>  
-                }
-                else
-                {
-                    <span class="old-price">De: R$ <span>@Html.DisplayFor(model => model.precProduto)</span></span>  
-                }          
+                @if (@Model.descontoPromocao == null || @Model.descontoPromocao == 0)
+        {
+            <span class="label">Por apenas</span>
+}
+else
+{
+        <div id="desconto-produto">@desconto% OFF</div>
+        <span class="old-price">De: R$ <span>@Html.DisplayFor(model => model.precProduto)</span></span>
+}
                 <span class="current-price">R$ @price</span>
-            </div> 
+            </div>
             <div class="product-qtd-info">
                 <span>Quantidade:</span>
                 <input class="product-qtd" type="text" value="1" maxlength="2">
             </div>
             <span class="product-available">Disponível em estoque</span>
+            @if (Model.descontoPromocao != 0)
+            {
+                <span class="product-promotion">Promoção!</span>
+            }
+
             <a href="javascript:;" class="btn btn-type-1 add-cart" data-product-id="@Model.idProduto" data-product-name="@Model.nomeProduto" data-product-price="@price">ADICIONAR AO CARRINHO</a>
         </div>
+        <span>
+            @{
+            string parcelPrice = Convert.ToDecimal(Model.precProduto / 3).ToString("#,#0.00");
+            }
+            Ou em <span class="color-destaque">3x</span> de <span class="color-destaque">R$@parcelPrice</span> sem juros e sem desconto
+        </span>
     </div>
 </section>
