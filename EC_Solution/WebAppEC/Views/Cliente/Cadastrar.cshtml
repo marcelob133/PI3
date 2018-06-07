@@ -4,10 +4,10 @@
     ViewBag.Title = "Criar minha conta";
 }
 
-<section id="account">
+<section id="account-cadastrar">
     <div class="wrap">
         <div id="content-account-form" class="content-form">
-            <h2>Criar minha conta</h2>
+            <h2>Criar nova conta</h2>
             @using (Html.BeginForm())
             {
                 @Html.ValidationSummary(true)
@@ -27,12 +27,9 @@
 
                 <div class="form-item">
                     @*Html.LabelFor(model => model.CPFCliente, htmlAttributes: new { @class = "control-label col-md-4" })*@
-                    <div class="control-label col-md-4 glyphicon glyphicon-phone"></div>
-                    <div class="col-md-8">
                         @Html.TextBoxFor(model => model.CPFCliente, 
                             new { @class = "form-control", maxlength = "11", placeholder = "CPF" })
                         @Html.ValidationMessageFor(model => model.CPFCliente)
-                    </div>
                 </div>
 
                 <div class="form-item">
@@ -77,7 +74,7 @@
                     @Html.ValidationMessageFor(model => model.confirmarSenha)
                 </div>
 
-                <div class="form-item">
+                <div class="form-item newsletter">
                     @Html.CheckBoxFor(model => model.recebeNewsLetter)
                     @Html.LabelFor(model => model.recebeNewsLetter, htmlAttributes: 
                         new { @class = "control-label" })
@@ -88,7 +85,7 @@
                 </div>
 
                 <div class="form-item">
-                    <input type="submit" value="Continuar" class="btn btn-type-1" />
+                    <input type="submit" value="Continuar" class="btn btn-type-1 btn-success" />
                 </div>
             }
         </div>

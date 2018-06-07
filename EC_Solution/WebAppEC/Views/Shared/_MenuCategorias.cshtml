@@ -2,14 +2,19 @@
 <nav class="menu">
     <div class="wrap">
         <ul class="navigation-menu">
+            <li>
+                <a href="/" class="itemMenu"> Home</a>
+            </li>
             @foreach (var item in Model)
-            {
-                if (item.idCategoria <= 5)
-                {
-                    <li>@Html.ActionLink(item.nomeCategoria, "Categoria", "Produto", 
-                        new { id = item.idCategoria }, null)</li>
-                }
-            }
+    {
+        if (item.idCategoria <= 5)
+        {
+            <li>
+                @Html.ActionLink(item.nomeCategoria, "Categoria", "Produto",
+             new { id = item.idCategoria }, null)
+        </li>
+}
+}
             <li>@Html.ActionLink("Outras...", "Categoria", "Produto", new { id = -1 }, null)</li>
         </ul>
     </div>    

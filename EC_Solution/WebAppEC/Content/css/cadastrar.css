@@ -1,0 +1,29 @@
+﻿#account-cadastrar h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: black;
+}
+#account-cadastrar .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    font-family: 'Press Start 2P', cursive;
+    border: 1px solid black;
+}
+#account-cadastrar form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+#account-cadastrar div#content-account-form {
+    background-color: white;
+}
+#account-cadastrar input {
+    min-width: 250px;
+}
+#account-cadastrar .form-item.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

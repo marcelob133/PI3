@@ -25,6 +25,7 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -178,8 +179,10 @@
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Checkout.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Email.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Entidades.cs" />
+    <Compile Include="Models\EsqueciSenhaViewModel.cs" />
     <Compile Include="Models\Estoque.cs" />
     <Compile Include="Models\ClienteViewModel.cs" />
     <Compile Include="Models\ItemCarrinho.cs" />
@@ -206,6 +209,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\app.css" />
+    <Content Include="Content\css\cadastrar.css" />
+    <Content Include="Content\css\detalheProduto.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontello.svg" />
     <Content Include="Global.asax" />
@@ -246,6 +251,7 @@
     <Content Include="Views\Pedido\Consultar.cshtml" />
     <Content Include="Views\Pedido\SemPedido.cshtml" />
     <Content Include="Views\Pedido\Detalhes.cshtml" />
+    <Content Include="Views\Cliente\Senha.cshtml" />
     <None Include="Web References\br.com.webint.www\ServicoGatewayPagamento.disco" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

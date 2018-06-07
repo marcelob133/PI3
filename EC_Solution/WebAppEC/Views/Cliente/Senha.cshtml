@@ -1,0 +1,32 @@
+﻿@model WebAppEC.Models.EsqueciSenhaViewModel
+
+<div class="fundo-login">
+    <div class="col-md-12" align="center">
+        <section id="login">
+            <div class="wrap">
+                <div id="content-login-form" class="content-form">
+                    @{ using (Html.BeginForm())
+                        {
+                            @Html.ValidationSummary(true)
+                            <div class="form-item">
+                                <h1>Forneça seu e-mail para resgate da senha:</h1>
+                                <div class="div-login">
+                                    <label for="email" class="label-login">Email:</label>
+                                    @Html.TextBoxFor(m => m.emailCliente, new { @class = "form-control", placeholder = "Ex. meunome@gmail.com", name = "email" })
+                                    @Html.ValidationMessageFor(m => m.emailCliente)
+                                </div>
+                                <div class="form-item">
+                                    <input type="submit" value="Receber Senha" class="btn btn-success btn-login" />
+                                </div>
+                                <div>
+                                    @ViewBag.msg
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
