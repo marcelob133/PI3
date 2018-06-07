@@ -876,6 +876,9 @@ thead:before {
 	NOVOS CSS
 =======================================================
 */
-.layout footer#footer {
-
+body {
+    background: url(../img/body-bg2.png) repeat 0 0;
+    background-size: 250px auto;
+    background-color: #eaebec;
+    overflow-x: hidden;
 }

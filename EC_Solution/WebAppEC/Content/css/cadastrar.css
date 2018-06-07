@@ -34,7 +34,7 @@
     align-items: center;
 }
 
-.message-cadastro-sucesso .wrap{
+.message-cadastro-sucesso .wrap, #login-senha #content-login-form{
     background-color: white;
     max-width: 350px;
     max-height: 350px;
@@ -52,11 +52,20 @@
     color: green;
     font-size: 25px;
 }
-.message-cadastro-sucesso .btn-success{
+.message-cadastro-sucesso .btn-success, #login-senha .btn-success{
     margin-top: 15px;
     color: #fff;
     background-color: #5cb85c;
     border-color: #4cae4c;
     font-family: 'Press Start 2P', cursive;
     border: 1px solid black;
+}
+#login-senha h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: green;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+#login-senha {
+    display: flex;
 }
