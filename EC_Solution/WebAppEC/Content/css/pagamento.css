@@ -1,40 +1,50 @@
-﻿#account-cadastrar h2, #Endereco h2 {
+﻿#checkout h2 {
     font-family: 'Press Start 2P', cursive;
     font-size: 18px;
     color: black;
 }
-#account-cadastrar .btn-success, #Endereco .btn-success {
+
+#checkout .btn-success {
     color: #fff;
     background-color: #5cb85c;
     border-color: #4cae4c;
     font-family: 'Press Start 2P', cursive;
     border: 1px solid black;
 }
-#account-cadastrar form, #Endereco form{
+
+#checkout form {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
 }
-#account-cadastrar div#content-account-form, #Endereco #content-address-form {
+
+#checkout div#content-account-form {
     background-color: white;
 }
-#account-cadastrar input, #Endereco input{
+
+#checkout input {
     min-width: 250px;
 }
-#account-cadastrar .form-item.newsletter, #Endereco {
+
+#checkout .form-item.newsletter {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.message-cadastro-sucesso {
+
+#checkout #content-checkout-form{
+    background-color: white;
+}
+
+
+.message-confirmado, .message-falha {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.message-cadastro-sucesso .wrap{
+.message-confirmado .wrap, .message-falha .wrap{
     background-color: white;
     max-width: 350px;
     max-height: 350px;
@@ -47,16 +57,8 @@
     border: 2px solid black;
     border-radius: 15px;
 }
-.message-cadastro-sucesso h2{
+.message-confirmado h2, .message-falha h2{
     font-family: 'Press Start 2P', cursive;
     color: green;
     font-size: 25px;
-}
-.message-cadastro-sucesso .btn-success{
-    margin-top: 15px;
-    color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-    font-family: 'Press Start 2P', cursive;
-    border: 1px solid black;
 }
