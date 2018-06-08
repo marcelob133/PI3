@@ -1,4 +1,6 @@
-﻿Number.prototype.formatMoney = function (c, d, t) {
+﻿$('.carousel').carousel();
+
+Number.prototype.formatMoney = function (c, d, t) {
     var n = this,
         c = isNaN(c = Math.abs(c)) ? 2 : c,
         d = d == undefined ? "." : d,
