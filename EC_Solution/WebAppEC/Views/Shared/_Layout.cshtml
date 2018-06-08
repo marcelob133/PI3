@@ -35,10 +35,13 @@
     <header id="header">
         <div class="topbar">
             <div class="wrap">
-                <a href="/" title="eCommerce Geek Store" id="logo"><h1>Geek Store</h1></a>
+                <a href="/" id="logo"></a>
                 <div class="content-header-navigation">
                     @using (@Html.BeginForm(actionName: "Consultar", controllerName: "Produto", method: FormMethod.Get, htmlAttributes: new { @class = "form-search" }))
                     {
+                        <figure class="image-menu">
+                            <img src="~/img/logo-2.png" width="100%" />
+                        </figure>
                         <div class="form-item">
                             <input type="text" placeholder="Pesquise por produtos" name="pesquisar" class="form-control" id="pesquisaProd" />
                             <button type="submit" id="btn-submit-search"><i class="icon icon-search"></i></button>

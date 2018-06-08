@@ -212,6 +212,8 @@
     <Content Include="Content\css\cadastrar.css" />
     <Content Include="Content\css\detalheProduto.css" />
     <Content Include="Content\css\list-index.css" />
+    <Content Include="Content\css\list-categoria.css" />
+    <Content Include="Content\css\login.css" />
     <Content Include="Content\css\pagamento.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontello.svg" />
