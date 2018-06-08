@@ -1,4 +1,13 @@
-﻿Number.prototype.formatMoney = function (c, d, t) {
+﻿$(window).on('scroll', function () {
+    if (window.scrollY > $('#header').height()) {
+        $('#btn-cart').css('color', '#000')
+        return true
+    }
+
+    $('#btn-cart').css('color', '#fff')
+})
+
+Number.prototype.formatMoney = function (c, d, t) {
     var n = this,
         c = isNaN(c = Math.abs(c)) ? 2 : c,
         d = d == undefined ? "." : d,
