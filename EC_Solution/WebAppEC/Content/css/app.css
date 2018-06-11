@@ -897,3 +897,55 @@ thead:before {
 .layout footer#footer {
 
 }
+
+.main-benefits {
+    height: 105px;
+    background-color: #c6c6c6;
+    margin-top: 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.main-benefits h3, .main-benefits p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid12-3 {
+    display: flex;
+    align-items: center;
+}
+
+.grid12-3 span {
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.benefits-text {
+    width: 80%;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.benefits-text h3 {
+    font-size: 20px;
+}
+
+.main-products h2, .destaques h2 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.main-products h2 {
+    margin-top: 40px;
+}
