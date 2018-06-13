@@ -5,9 +5,8 @@
 }
 
 <p class="title-page">MEUS PEDIDOS</p>
-
-<section id="cart">
-    <div class="cart-header">
+<div align="center">
+    <section id="cart">
         <div class="wrap">
             <table class="table">
                 <tr>
@@ -29,7 +28,7 @@
                     <td class="cart-product-price-title">
                         @Html.DisplayNameFor(model => model.totalPagto)
                     </td>
-                    <td>Detalhes</td>
+                    <td class="cart-product-name-title">Detalhes</td>
                 </tr>
                 @foreach (var item in Model)
                 {
@@ -59,7 +58,7 @@
                                 {
                                     @Html.Hidden("pedido", item.idPedido);
                                     @Html.Hidden("total", item.totalPagto);
-                                    <input title="Clique aqui para obter detalhes sobre este pedido..." type="submit" value="...">
+                                    <input type="submit" value="...">
                                 }
                             </td>
                         </tr>
@@ -67,5 +66,5 @@
                 }
             </table>
         </div>
-    </div>
-</section>
+    </section>
+</div>

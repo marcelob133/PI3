@@ -1,0 +1,33 @@
+﻿.title-page{
+    text-align: center;
+}
+
+#cart {
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+
+.wrap {
+    text-align: center;
+    width: 1024px;
+}
+
+.cart-product-name-title,
+.cart-product-photo-title,
+.cart-product-price-title,
+.cart-product-qtd-title,
+.cart-product-total-title {
+    font-size: 15px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #00bcd4;
+}
+
+.cart-product-price-title, .cart-product-price-item{
+    width: 20%;
+}
+
+.cart-product-name-item{
+    font-size: 14px;
+    text-transform: uppercase;
+}

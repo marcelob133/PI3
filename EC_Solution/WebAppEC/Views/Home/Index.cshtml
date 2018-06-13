@@ -4,12 +4,39 @@
     ViewBag.Title = "Home";
 }
 
-<section id="propaganda">
-    
-</section>
+<section id="propaganda"></section>
 
 <section id="featured-products">
-    <div class="wrap">
+    <div class="wrap allcontent">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/img/God.jpg" alt="Los Angeles">
+                </div>
+
+                <div class="item">
+                    <img src="~/img/Quadros.jpg" alt="Chicago">
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
 
         <div class="row main-benefits">
             <div class="col-sm-12 col-md-4 col-xs-4">
@@ -58,63 +85,62 @@
                         string price = string.Empty;
                         if (item != null)
                         {
-                                <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <div class="product">
-                                        @{
-                                            price = Convert.ToDecimal(item.precProduto - (decimal)item.descontoPromocao).ToString("#,##.00");
-                                            if (item.precProduto > 0)
+                            <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                <div class="product">
+                                    @{
+                                        price = Convert.ToDecimal(item.precProduto - (decimal)item.descontoPromocao).ToString("#,##.00");
+                                        if (item.precProduto > 0)
+                                        {
+                                            if (item.imagem != null)
                                             {
-                                                if (item.imagem != null)
-                                                {
-                                                    string base64String = Convert.ToBase64String(item.imagem);
-                                                    imgProduct = "data:image/png;base64," + base64String;
-                                                    nameProduct = @item.nomeProduto;
-                                                }
-                                                else
-                                                {
-                                                    imgProduct = "/img/default_product.png";
-                                                    nameProduct = "Não foi possível encontrar a imagem do produto.";
-                                                }
-                                                <a id="product-@item.idProduto" href="~/produto/detalhe/@item.idProduto" data-product-id="@item.idProduto" data-product-name="@item.nomeProduto" data-product-price="@price">
-                                                    <img src=@imgProduct class="product-image" alt="@nameProduct" title="@nameProduct" />
-                                                    <div class="product-info">
-                                                        <h2 class="product-name">@item.nomeProduto</h2>
-
-                                                        @{
-                                                            string strDescricao = item.descProduto;
-                                                            if (strDescricao.Length > 100)
-                                                            {
-                                                                strDescricao = strDescricao.Substring(0, 100) + "...";
-                                                            }
-                                                        }
-                                                        <p class="produto-descricao">@strDescricao</p>
-                                                    </div>
-                                                </a>
-                                                <button type="button" class="add-cart" data-product-id="@item.idProduto" data-product-name="@item.nomeProduto" data-product-price="@price"><i class="icon icon-basket"></i></button>
-                                                
-                                         
-
+                                                string base64String = Convert.ToBase64String(item.imagem);
+                                                imgProduct = "data:image/png;base64," + base64String;
+                                                nameProduct = @item.nomeProduto;
                                             }
-                                        }
+                                            else
+                                            {
+                                                imgProduct = "/img/default_product.png";
+                                                nameProduct = "Não foi possível encontrar a imagem do produto.";
+                                            }
+                                            <a id="product-@item.idProduto" href="~/produto/detalhe/@item.idProduto" data-product-id="@item.idProduto" data-product-name="@item.nomeProduto" data-product-price="@price">
+                                                <img src=@imgProduct class="product-image" alt="@nameProduct" title="@nameProduct" />
+                                                <div class="product-info">
+                                                    <h2 class="product-name">@item.nomeProduto</h2>
 
-                                        @if (item.descontoPromocao != 0)
-                                        {
-                                            <span class="product-price">De R$@item.precProduto.ToString("#,##.00") por <span>R$@price </span></span>
-                                        }
+                                                    @{
+                                                        string strDescricao = item.descProduto;
+                                                        if (strDescricao.Length > 100)
+                                                        {
+                                                            strDescricao = strDescricao.Substring(0, 100) + "...";
+                                                        }
+                                                    }
+                                                    <p class="produto-descricao">@strDescricao</p>
+                                                </div>
+                                            </a>
+                                                <button type="button" class="add-cart" data-product-id="@item.idProduto" data-product-name="@item.nomeProduto" data-product-price="@price"><i class="icon icon-basket"></i></button>
 
-                                        @if (item.descontoPromocao == 0)
-                                        {
-                                            <span class="product-price"><span>R$@price </span></span>
-                                        }
-                                    </div>
+
+
+                                                        }
+                                    }
+
+                                    @if (item.descontoPromocao != 0)
+                                    {
+                                        <span class="product-price">De R$@item.precProduto.ToString("#,##.00") por <span>R$@price </span></span>
+                                    }
+
+                                    @if (item.descontoPromocao == 0)
+                                    {
+                                        <span class="product-price"><span>R$@price </span></span>
+                                    }
                                 </div>
-                        }
-                        cont++;
-                    }
-
-                }
-            }
                             </div>
+                                                                }
+                                                                cont++;
+                                                            }
+
+                                                        }
+            }
+        </div>
     </div>
 </section>
-

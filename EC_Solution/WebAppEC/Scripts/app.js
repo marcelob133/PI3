@@ -1,4 +1,10 @@
-﻿$(window).on('scroll', function () {
+﻿$('.produto-descricao').each(function (it, tag) {
+    if (tag.innerText.length > 25) {
+        tag.innerText = tag.innerText.slice(0, 25) + '...'
+    }
+})
+
+$(window).on('scroll', function () {
     if (window.scrollY > $('#header').height()) {
         $('#btn-cart').css('color', '#000')
         return true

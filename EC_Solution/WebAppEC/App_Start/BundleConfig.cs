@@ -36,6 +36,8 @@ namespace WebAppEC
                       "~/Content/css/login.css",
                       "~/Content/css/cadastrar.css",
                       "~/Content/css/pagamento.css",
+                      "~/Content/css/carrinho.css",
+                      "~/Content/css/pedido.css",
                       "~/Content/css/detalheProduto.css",
                       "~/Content/css/jquery-ui.css",
                       "~/Content/css/jquery-ui.theme.css",

@@ -1,4 +1,6 @@
-﻿/* http://meyerweb.com/eric/tools/css/reset/
+﻿
+Skip to content Features Business Explore Marketplace Pricing This repository Sign in or Sign up 0 0 0 marcelob133/PI3 Code Issues 0 Pull requests 0 Projects 0 Insights PI3/EC_Solution/WebAppEC/Content/css/app.css af5ecbc 5 minutes ago @RodrigoLS RodrigoLS alterações @marcelob133 @RodrigoLS 951 lines (809 sloc) 16.6 KB
+/* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
 License: none (public domain)
 */
@@ -15,63 +17,69 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
-html{
+
+html {
     position: relative;
     min-height: 100%;
 }
+
 body {
     line-height: 1;
     color: #1f1f1f;
-    background: url(../img/body-bg2.png) repeat 0 0;
+    background: url(/img/body-bg2.png) repeat 0 0;
     background-size: 250px auto;
     background-color: #eaebec;
     overflow-x: hidden;
 }
+
 ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    list-style: none;
 }
 
-button{
-	background: none;
-	border: 0;
-	padding: 0;
-	cursor: pointer;
-	outline: none;
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button {
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
 }
 
 .wrap:before, .wrap:after,
 .products:before, .products:after {
-	content: "";
-	display: table;
+    content: "";
+    display: table;
 }
 
 .wrap:after,
 .products:after {
-	clear: both;
+    clear: both;
 }
 
 /*
@@ -83,14 +91,11 @@ button{
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 @font-face {
-  font-family: 'fontello';
-  src: url('../../fonts/fontello.eot?67914387');
-  src: url('../../fonts/fontello.eot?67914387#iefix') format('embedded-opentype'),
-       url('../../fonts/fontello.woff?67914387') format('woff'),
-       url('../../fonts/fontello.ttf?67914387') format('truetype'),
-       url('../../fonts/fontello.svg?67914387#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'fontello';
+    src: url('../../fonts/fontello.eot?67914387');
+    src: url('../../fonts/fontello.eot?67914387#iefix') format('embedded-opentype'), url('../../fonts/fontello.woff?67914387') format('woff'), url('../../fonts/fontello.ttf?67914387') format('truetype'), url('../../fonts/fontello.svg?67914387#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
@@ -102,48 +107,59 @@ button{
   }
 }
 */
- 
- [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
- 
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
- 
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
- 
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
- 
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
- 
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
- 
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- 
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
-.icon-minus:before { content: '\e800'; } /* '' */
-.icon-cancel:before { content: '\e801'; } /* '' */
-.icon-search:before { content: '\e802'; } /* '' */
-.icon-plus:before { content: '\e803'; } /* '' */
-.icon-basket:before { content: '\e804'; } /* '' */
-.icon-user:before { content: '\e805'; } /* '' */
+
+.icon-minus:before {
+    content: '\e800';
+}
+/* '' */
+.icon-cancel:before {
+    content: '\e801';
+}
+/* '' */
+.icon-search:before {
+    content: '\e802';
+}
+/* '' */
+.icon-plus:before {
+    content: '\e803';
+}
+/* '' */
+.icon-basket:before {
+    content: '\e804';
+}
+/* '' */
+.icon-user:before {
+    content: '\e805';
+}
+/* '' */
 
 /*
 =======================================================
@@ -151,119 +167,119 @@ button{
 =======================================================
 */
 
-#cart-header-page #cart{
+#cart-header-page #cart {
     display: none;
 }
 
-#cart{	
-	width: 100%;
+#cart {
+    width: 100%;
 }
 
-#cart table{
-	width: 100%;
-	table-layout: fixed;
+    #cart table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+.cart-header {
+    width: 100%;
+    background: #1f1f1f;
 }
 
-.cart-header{
-	width: 100%;
-	background: #1f1f1f;
+.cart-body {
+    width: 100%;
 }
 
-.cart-body{
-	width: 100%;
+    .cart-header td,
+    .cart-body td,
+    .cart-buttons td {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: middle;
+    }
+
+.cart-header td {
+    padding: 10px;
+    color: #fff;
 }
 
-.cart-header td,
 .cart-body td,
-.cart-buttons td{
-	font-size: 12px;
-	font-weight: bold;
-	text-transform: uppercase;
-	vertical-align: middle;
-}
-
-.cart-header td{
-	padding: 10px;
-	color: #fff;
-}
-
-.cart-body td,
-.cart-buttons td{
-	padding: 20px 10px;
-	color: #1f1f1f;
+.cart-buttons td {
+    padding: 20px 10px;
+    color: #1f1f1f;
 }
 
 .cart-product-photo-title,
-.cart-product-photo-item{
-	width: 10%;
+.cart-product-photo-item {
+    width: 10%;
 }
 
-.cart-product-photo-item img{
-	width: 100%;
-	height: auto;
-}
+    .cart-product-photo-item img {
+        width: 100%;
+        height: auto;
+    }
 
 .cart-product-name-title,
-.cart-product-name-item{
-	width: 40%;
+.cart-product-name-item {
+    width: 40%;
 }
 
 .cart-product-price-title,
-.cart-product-price-item{
-	width: 15%;
+.cart-product-price-item {
+    width: 15%;
     /*inclusão*/
     text-align: left;
 }
 
 .cart-product-qtd-title,
-.cart-product-qtd-item{
-	width: 15%;
+.cart-product-qtd-item {
+    width: 15%;
     /*inclusão*/
     text-align: left;
 }
 
 .cart-product-total-title,
-.cart-total-products{
-	width: 20%;
+.cart-total-products {
+    width: 20%;
 }
 
-.cart-product-total-item{
-	width: 10%;
+.cart-product-total-item {
+    width: 10%;
 }
 
-.cart-actions{
-	width: 10%;
+.cart-actions {
+    width: 10%;
 }
 
-.cart-actions .cancel-cart{
-	font-size: 18px;
-	transition: color .3s ease-out;
+    .cart-actions .cancel-cart {
+        font-size: 18px;
+        transition: color .3s ease-out;
+    }
+
+        .cart-actions .cancel-cart:hover {
+            color: #e74d3d;
+        }
+
+.cart-buttons {
+    width: 100%;
+    background-color: #33b5e5;
 }
 
-.cart-actions .cancel-cart:hover{
-	color: #e74d3d;
+    .cart-buttons td {
+        color: #fff;
+    }
+
+    .cart-buttons .cart-checkout-buttons {
+        width: 80%;
+    }
+
+.cart-checkout-buttons .navigation-buttons {
+    float: right;
 }
 
-.cart-buttons{
-	width: 100%;
-	background-color: #33b5e5;
-}
-
-.cart-buttons td{
-	color: #fff;
-}
-
-.cart-buttons .cart-checkout-buttons{
-	width: 80%;
-}
-
-.cart-checkout-buttons .navigation-buttons{
-	float: right;
-}
-
-.cart-checkout-buttons .navigation-buttons .btn{
-	padding: 15px 50px;
-}
+    .cart-checkout-buttons .navigation-buttons .btn {
+        padding: 15px 50px;
+    }
 
 /*
 =======================================================
@@ -271,18 +287,18 @@ button{
 =======================================================
 */
 
-#header{
-	width: 100%;
+#header {
+    width: 100%;
 }
 
-#header .topbar {
-    width: 100%;
-    background: #33b5e5;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    border-bottom: 5px solid #fff;
-}
+    #header .topbar {
+        width: 100%;
+        background: #33b5e5;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        border-bottom: 5px solid #fff;
+    }
 
 #logo {
     float: left;
@@ -319,44 +335,44 @@ button{
     margin-top: 10px;
 }
 
-.form-search .form-item {
-    margin: 0;
-    width: 450px;
+    .form-search .form-item {
+        margin: 0;
+        width: 450px;
+    }
+
+#btn-submit-search {
+    position: absolute;
+    right: 7%;
+    top: 7px;
+    display: block;
+    width: 20px;
+    font-size: 18px;
+    color: #4a4a4a;
 }
 
-#btn-submit-search{
-	position: absolute;
-	right: 7%;
-	top: 7px;
-	display: block;
-	width: 20px;
-	font-size: 18px;
-	color: #4a4a4a;
+    #btn-submit-search:focus {
+        outline: none;
+    }
+
+    #btn-submit-search .icon {
+        color: #cfcfcf;
+        transition: all .2s ease-out;
+    }
+
+.form-search .form-control:focus ~ #btn-submit-search .icon {
+    color: #33b5e5;
 }
 
-#btn-submit-search:focus{
-	outline: none;
+.account-actions {
+    float: left;
+    margin: 0 0 0 110px;
 }
 
-#btn-submit-search .icon{
-	color: #cfcfcf;
-	transition: all .2s ease-out;
-}
-
-.form-search .form-control:focus ~ #btn-submit-search .icon{
-	color: #33b5e5;
-}
-
-.account-actions{
-	float: left;
-	margin: 0 0 0 110px;
-}
-
-.user-logged .profile{
+.user-logged .profile {
     cursor: default;
 }
 
-#header .btn{
+#header .btn {
     min-width: 115px;
 }
 
@@ -374,7 +390,7 @@ button{
     font-size: 33px;
 }
 
-#header .btn-type-1:hover{
+#header .btn-type-1:hover {
     background: #0082B2;
     border-color: #0082B2;
     color: #fff;
@@ -389,8 +405,8 @@ button{
 }
 
 
-#btn-cart.btn-cart-active{
-	/*transform: translateY(-9px);*/
+#btn-cart.btn-cart-active {
+    /*transform: translateY(-9px);*/
 }
 
 /*MENU*/
@@ -407,22 +423,22 @@ button{
     width: 13.666%;
 }
 
-.navigation-menu li a{
-	display: block;
-	padding: 15px 20px;
-	text-decoration: none;
-    background: #33b5e5;
-	color: #fff;
-	font-size: 14px;
-	font-weight: bold;
-	text-align: center;
-	text-transform: uppercase;
-    transition: all .2s ease-out;
-}
+    .navigation-menu li a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        background: #33b5e5;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .2s ease-out;
+    }
 
-.navigation-menu li a:hover{
-    border-bottom: 2px solid black;
-}
+        .navigation-menu li a:hover {
+            border-bottom: 1px solid black;
+        }
 
 /*
 =======================================================
@@ -430,83 +446,85 @@ button{
 =======================================================
 */
 
-body{
-	font-family: 'Open Sans', sans-serif;
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
-.main{
-	position: relative;
-	width: 100%;
+.main {
+    position: relative;
+    width: 100%;
     height: auto;
-	padding: 25px 0;
+    padding: 25px 0;
 }
 
-.wrap{
-	width: 1024px;    
-	margin: 0 auto;
+.wrap {
+    width: 1024px;
+    margin: 0 auto;
 }
 
-.title-page{
-	margin-bottom: 20px;
-	font-size: 32px;
-	font-weight: bold;
-	text-transform: uppercase;
+.title-page {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.navigation li{
-	float: left;
+.navigation li {
+    float: left;
 }
 
-.navigation-buttons li + li{
-	margin-left: 15px;
+.navigation-buttons li + li {
+    margin-left: 15px;
 }
 
-.btn{
-	display: inline-block;
-	padding: 15px 20px;
-	font-size: 14px;
-	line-height: 20px;
+.btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 14px;
+    line-height: 20px;
     border-radius: 3px;
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	box-sizing: border-box;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
     transition: all .2s ease-out;
     cursor: pointer;
 }
 
-.btn.btn-disabled{
-    cursor: default;
+    .btn.btn-disabled {
+        cursor: default;
+    }
+
+.btn-type-1 {
+    color: #fff;
+    background: #33b5e5;
+    border: 1px solid #fff;
 }
 
-.btn-type-1{
-	color: #fff;
-	background: #33b5e5;
-	border: 1px solid #fff;
+    .btn-type-1:hover {
+        color: #33b5e5;
+        background: #fff;
+        border-color: #33b5e5;
+    }
+
+.btn-type-2 {
+    color: #33b5e5;
+    background: #fff;
+    border: 1px solid #33b5e5;
 }
 
-.btn-type-1:hover{
-	color: #33b5e5;
-	background: #fff;
-	border-color: #33b5e5;
-}
+    .btn-type-2:hover {
+        background: #fafafa;
+    }
 
-.btn-type-2{
-	color: #33b5e5;
-	background: #fff;
-	border: 1px solid #33b5e5;
+.btn-type-3 {
+    color: #fff;
+    background: #1f1f1f;
+    border: 1px solid #1f1f1f;
 }
-
-.btn-type-2:hover{
-    background: #fafafa;
+.product {
+    margin-bottom: 30px;
 }
-
-.btn-type-3{
-	color: #fff;
-	background: #1f1f1f;
-	border: 1px solid #1f1f1f;
-}
-
 
 /*
 =======================================================
@@ -514,26 +532,35 @@ body{
 =======================================================
 */
 
-.content-form{
+.content-form {
     margin: 0 auto;
     padding: 40px;
     border: 2px solid black;
     border-radius: 5px;
 }
 
-.content-form h2{
-    font-size: 22px;
-    font-weight: bold;
-    color: #33b5e5;
+#product-details-p {
+    border-radius: 5px;
+    background: #fff;
     text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border: unset;
 }
 
-.form-item{
-	position: relative;
+    .content-form h2 {
+        font-size: 22px;
+        font-weight: bold;
+        color: #33b5e5;
+        text-align: center;
+    }
+
+.form-item {
+    position: relative;
     margin: 20px 0;
 }
 
-.content-form .form-item{
+.content-form .form-item {
     margin-bottom: 0;
 }
 
@@ -551,44 +578,44 @@ body{
     transition: all .2s ease-out;
 }
 
-.form-item .form-control:focus {
-    color: #1a1a1a;
-	border-color: #33b5e5;
-}
+    .form-item .form-control:focus {
+        color: #1a1a1a;
+        border-color: #33b5e5;
+    }
 
-.form-item .form-control.form-control-type-2{
-    width: 75%;
-}
+    .form-item .form-control.form-control-type-2 {
+        width: 75%;
+    }
 
-.form-item .form-control.form-control-type-3{
-    width: 50%;
-}
+    .form-item .form-control.form-control-type-3 {
+        width: 50%;
+    }
 
-.form-item .form-control.form-control-type-4{
-    width: 25%;
-}
+    .form-item .form-control.form-control-type-4 {
+        width: 25%;
+    }
 
-.form-item .form-control.form-control-type-2:focus{
-    width: 80%;
-}
+    .form-item .form-control.form-control-type-2:focus {
+        width: 80%;
+    }
 
-.form-item .btn{
+.form-item .btn {
     width: 100%;
 }
 
 .form-validation-success,
-.field-validation-error{
+.field-validation-error {
     display: block;
     margin: 10px 0;
     font-size: 14px;
     font-weight: bold;
 }
 
-.form-validation-success{
+.form-validation-success {
     color: #2ecc71;
 }
 
-.field-validation-error{    
+.field-validation-error {
     color: #e74d3d;
 }
 
@@ -598,8 +625,8 @@ body{
 =======================================================
 */
 
-#content-login-form, #content-checkout-form{
-    width: 300px;    
+#content-login-form, #content-checkout-form {
+    width: 300px;
 }
 
 /*
@@ -608,7 +635,7 @@ body{
 =======================================================
 */
 
-#content-account-form{
+#content-account-form {
     width: 500px;
 }
 
@@ -618,7 +645,7 @@ body{
 =======================================================
 */
 
-#content-address-form{
+#content-address-form {
     width: 500px;
 }
 
@@ -736,94 +763,106 @@ product-details .content-product-image {
     border-top: 5px solid white;
 }
 
-#footer h3{
-    font-size: 17px;
-    color: black;
-    font-family: 'Press Start 2P', cursive;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
+    #footer h3 {
+        font-size: 17px;
+        color: black;
+        font-family: 'Press Start 2P', cursive;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
 
-#footer ul{
-    border-left: 3px solid black;
-    padding-left: 15px;
-}
+    #footer ul {
+        border-left: 3px solid black;
+        padding-left: 15px;
+    }
 
-#footer li{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 10px;
-}
-#footer a{
-    color: white;
-}
-#footer li a:hover {
-    text-decoration: none;
-}
+    #footer li {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 10px;
+    }
 
-#footer p{
-	color: #fff;
-	text-align: center;
-}
+    #footer a {
+        color: white;
+    }
 
-#footer .pagtos-container .pagtos .list {
-    display: flex;
-    flex-wrap: wrap;
-}
+    #footer li a:hover {
+        text-decoration: none;
+    }
 
-#footer .pagtos li:not(:first-child) img {
-    -webkit-filter: opacity(.2);
-    filter: opacity(.2);
-}
-#footer .pagtos li{
-    padding: 0 10px 2px 10px;
-}
-#footer .navigation-menu li:first-child{
-    margin-top:22px;
-}
-#footer .navigation-menu li{
-    float: none;
-    padding-bottom: 5px;
-}
-#footer .navigation-menu ul{
-    min-height: 110px;
-}
+    #footer p {
+        color: #fff;
+        text-align: center;
+    }
 
-#footer .navigation-menu li a{
-    display:block;
-    padding: 0px;
-    background: none;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: left;
-    text-transform: uppercase;
-}
-#footer .row{
-    min-height: 150px;
-}
-#footer .menu{
-    background: none;
-}
-#footer button.btn {
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    transition: all .3s linear;
-    margin-left: -2px;
-    padding: 5px 10px;
-    margin-top: 10px;
-}
-#footer button.btn:hover {
-    background: white;
-    border: 1px solid #fff;
-    color: #455A64;
-}
-#footer .sobre li, #footer .minha-conta li{
-    padding-top: 4px;
-}
-#footer p{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
-}
+    #footer .pagtos-container .pagtos .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #footer .pagtos li:not(:first-child) img {
+        -webkit-filter: opacity(.2);
+        filter: opacity(.2);
+    }
+
+    #footer .pagtos li {
+        padding: 0 10px 2px 10px;
+    }
+
+    #footer .navigation-menu li:first-child {
+        margin-top: 22px;
+    }
+
+    #footer .navigation-menu li {
+        float: none;
+        padding-bottom: 5px;
+    }
+
+    #footer .navigation-menu ul {
+        min-height: 110px;
+    }
+
+    #footer .navigation-menu li a {
+        display: block;
+        padding: 0px;
+        background: none;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    #footer .row {
+        min-height: 150px;
+    }
+
+    #footer .menu {
+        background: none;
+    }
+
+    #footer button.btn {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        transition: all .3s linear;
+        margin-left: -2px;
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+
+        #footer button.btn:hover {
+            background: white;
+            border: 1px solid #fff;
+            color: #455A64;
+        }
+
+    #footer .sobre li, #footer .minha-conta li {
+        padding-top: 4px;
+    }
+
+    #footer p {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 12px;
+    }
 /*
 =======================================================
 	OVERLAY
@@ -846,18 +885,18 @@ product-details .content-product-image {
 =======================================================
 */
 
-.message .title-page{
+.message .title-page {
     font-size: 50px;
     text-align: center;
     margin: 100px 0 50px;
 }
 
-.message p{
+.message p {
     font-size: 30px;
     text-align: center;
 }
 
-.message .btn{
+.message .btn {
     display: block;
     width: 250px;
     margin: 40px auto;
@@ -870,14 +909,14 @@ product-details .content-product-image {
 */
 
 .alert-danger {
-  color: #b94a48 !important;
-  background-color: #f2dede !important;
-  border-color: #eed3d7 !important;
-  text-align:center !important;
+    color: #b94a48 !important;
+    background-color: #f2dede !important;
+    border-color: #eed3d7 !important;
+    text-align: center !important;
 }
 
-.cart-product-photo-detalhe{
-	width: 30% !important;
+.cart-product-photo-detalhe {
+    width: 30% !important;
     height: 50px !important;
 }
 
@@ -895,39 +934,42 @@ thead:before {
 =======================================================
 */
 .layout footer#footer {
-
+}
+.allcontent {
+    background: #fff;
 }
 
 .main-benefits {
     height: 105px;
     background-color: #c6c6c6;
-    margin-top: 20px;
+    margin: 20px auto;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
-.main-benefits h3, .main-benefits p {
-    font-family: 'Roboto', sans-serif;
-}
+    .main-benefits h3, .main-benefits p {
+        font-family: 'Roboto', sans-serif;
+    }
 
 .grid12-3 {
     display: flex;
     align-items: center;
 }
 
-.grid12-3 span {
-    color: white;
-    background-color: black;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-}
+    .grid12-3 span {
+        color: white;
+        background-color: black;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
 
 .benefits-text {
     width: 80%;
@@ -935,9 +977,9 @@ thead:before {
     text-align: center;
 }
 
-.benefits-text h3 {
-    font-size: 20px;
-}
+    .benefits-text h3 {
+        font-size: 20px;
+    }
 
 .main-products h2, .destaques h2 {
     font-family: 'Press Start 2P', cursive;
@@ -949,3 +991,5 @@ thead:before {
 .main-products h2 {
     margin-top: 40px;
 }
+
+© 2018 GitHub, Inc. Terms Privacy Security Status Help Contact GitHub API Training Shop Blog About Press h to open a hovercard with more details.

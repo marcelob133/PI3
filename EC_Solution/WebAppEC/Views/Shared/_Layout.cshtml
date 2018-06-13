@@ -154,13 +154,18 @@
         <p><strong>&copy; Julio/João/Rodrigo/Marcelo/Alexandre | @DateTime.Now.Year</strong></p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-    @Scripts.Render("~/bundles/jqueryui")
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+    @Scripts.Render("~/Scripts/respond.min.js")
+    @Scripts.Render("~/Scripts/jquery.validate.min.js")
+    @Scripts.Render("~/Scripts/_references.js")
+    @Scripts.Render("~/Scripts/jquery.validate.unobtrusive.min.js")
+    @Scripts.Render("~/Scripts/jquery.validate.min.js")
+    @Scripts.Render("~/Scripts/jquery-ui.min.js")
     @Scripts.Render("~/bundles/autocomplete")
     @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", required: false)
-   
+
+
 </body>
 </html>
